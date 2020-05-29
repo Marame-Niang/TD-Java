@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class EXO14 {
+
+	public static void main(String[] args) {
+		int jour, mois, an;
+		 
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Veuillez entrer un jour");
+		jour = scan.nextInt();
+		
+		Scanner scan1 = new Scanner(System.in);
+		System.out.println("Veuillez entrer un mois");
+		mois = scan.nextInt();
+		
+		Scanner scan2 = new Scanner(System.in);
+		System.out.println("Veuillez entrer une année");
+		an = scan.nextInt();
+		
+		
+		 
+		
+		if (jour < 1 || mois < 1 || an < 1 || jour > 31 || mois > 12) {
+			System.out.println("L’année est invalide ");
+		}
+				else {
+					if (jour > 30 && mois == 9 || mois == 11 || mois == 4  ||  mois == 6) {
+						System.out.println("L’année est invalide ");
+					}
+					else {
+
+						if (jour > 29 && mois == 2) {
+							System.out.println("L’année est invalide ");
+						}
+
+							else {
+								if ( mois == 2 && jour > 28  && an % 4 != 0 || an % 100 == 0 || an % 400 == 0   ) {
+									System.out.println("L’année est invalide ");
+							}
+								else {
+									if (mois == 2 && jour <= 29   && an % 4 == 0 && an % 100 != 0 && an % 400 != 0 ) {
+										System.out.println("L’année est bissextile ");
+									}
+									
+									else {
+										if (mois == 2 && an % 4 != 0 || an % 100 == 0 || an % 400 == 0   ) {
+											System.out.println("L’année est n’est pas bissextile ");
+									}
+										else System.out.println("L’année est valide ");
+						}
+					}
+				}
+		    }		
+		}			
+	}
+	
+}
+	
+

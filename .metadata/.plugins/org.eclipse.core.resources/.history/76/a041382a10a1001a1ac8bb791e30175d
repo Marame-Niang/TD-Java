@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class EXO26 {
+
+	public static void main(String[] args) {
+		
+		
+	     int N, i, croissant, decroissant;
+	     
+	     do {
+			Scanner scan = new Scanner(System.in);
+		    System.out.print("Entrer la longueur de la suite");
+		    N = scan.nextInt();
+	     } while (N < 0) ;
+	     
+	     int Tab[] = new int[N];
+	     
+	     croissant = 0 ;
+	     decroissant = 0 ;
+	     
+	     for (i = 0; i<Tab.length; i++) {
+	    	 Scanner scan = new Scanner(System.in);
+	    	 System.out.printf("Saisir Tab [ "+ i + "] :") ;	    	 
+	    	 Tab[i] = scan.nextInt();
+	     }
+	     for (i = 0; i< Tab.length; i++) {
+	    	 if(Tab[i]<=Tab[i+1]) {
+	    		 croissant ++ ;
+	    	 }
+	    	 else {
+	    		 if (Tab[i]>=Tab[i+1]) {
+    	    		 decroissant ++ ;	
+	    		 } 
+	    	 }	
+	     }
+	    if (decroissant == N) {
+	    	System.out.print("Les nombres saisis sont dans l’ordre décroissant");
+    	 }	 
+	    else {
+	    	if (croissant == N) {
+			System.out.print("Les nombres saisis sont dans l’ordre croissant");
+		}
+	    	else {
+	    		System.out.print("Les nombres saisis sont quelconque");
+	    	}
+	    }
+	    
+	}	 
+}	      
+
+	
+
+

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class EXO2 {
+
+	public static void main(String[] args) {
+		float PI, Surface, Périmètre, Rayon;
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("saisir le rayon");
+		Rayon = scan.nextFloat();
+		
+		PI = 4*Math.atan(1) ;
+		Périmètre = 2 * PI * Rayon ;
+		Surface= PI * Rayon * Rayon ;
+		
+		System.out.print(" le périmètre vaut : "+ Périmètre +"\r") ;
+		System.out.print(" la surface vaut : "+ Surface) ;
+
+	
+
+	}
+
+}
